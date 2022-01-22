@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <section class="tasks-page">
+        <h1>Add new task</h1>
+        <div class="tasks-page__add">
+            <label>
+                <textarea placeholder="Write down your task" class="tasks-page__add---textarea"
+                          id="add-textarea"></textarea>
+            </label>
+            <svg
+                    class="tasks-page__add---icon" xmlns="http://www.w3.org/2000/svg"
+                    id="add-btn"
+                    viewBox="0 0 448 512">
+                <path
+                        d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+            </svg>
+        </div>
+
+        <h1>Tasks list</h1>
+        <div class="tasks-page__list" id="list">
+            <div class="tasks-page__list---box">
+                <h2>Test</h2>
+                <button class="edit">Edit</button>
+                <button class="remove">Remove</button>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <button style="display:none; padding: 20px;" id="clear">Clear storage</button>
+    </section>
+
+    <section class="timer-page" id="timer-page">
+        <div class="timer-page__current--task">
+            <h1>Current task</h1>
+            <h2 id="task-label">My task is here! Have a great day and get your stuff done!</h2>
+        </div>
+
+        <div class="timer-page__timer">
+
+            <svg class="timer-page__timer--svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g class="timer-page__timer--circle">
+                    <circle class="timer-page__timer--path" cx="50" cy="50" r="45"/>
+                    <path
+                            stroke-dasharray="0 283"
+                            class="timer-page__timer--remaining"
+                            id="remaining"
+                            stroke="#FFFFFF"
+                            d="
+                             M 50, 50
+                             m -45, 0
+                             a 45,45 0 1,0 90,0
+                             a 45,45 0 1,0 -90,0"></path>
+                </g>
+            </svg>
+
+            <span class="timer-page__timer--label">
+            <h1 class="timer-page__timer--label---current" id="current">Work timer</h1>
+            <h1 class="timer-page__timer--label---countdown" id="countdown">00:05</h1>
+            <h1 class="timer-page__timer--label---rounds" id="rounds">Round 0 out of 3</h1>
+            </span>
+
+        </div>
+
+        <div class="timer-page__play--pause">
+            <button class="timer-page__play--pause---play" id="play">
+                <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 448 512">
+                    <path fill="#FFFFFF"
+                          d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                </svg>
+            </button>
+
+            <button class="timer-page__play--pause---pause active" id="pause">
+                <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 448 512">
+                    <path fill="#FFFFFF"
+                          d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section class="settings-page" id="settings-page">
+        <h1>Settings</h1>
+
+        <div class="settings-page__wrapper">
+            <div>
+            <h1>Main timer</h1>
+            <input type="number" min="1" max="60" id="mainInput">
+            </div>
+
+            <div>
+            <h1>Short timer</h1>
+            <input type="number" min="1" max="60" id="shortInput">
+            </div>
+
+            <div>
+            <h1>Long timer</h1>
+            <input type="number" min="1" max="60" id="longInput">
+            </div>
+
+            <div>
+            <h1>Rounds</h1>
+            <input type="number" min="1" max="4" id="roundsInput">
+            </div>
+        </div>
+
+        <button id="inputApply">Apply</button>
+    </section>
+</div>
+
+<script src="pomodoro.js"></script>
+</body>
+</html>

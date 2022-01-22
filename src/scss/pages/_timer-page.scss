@@ -1,0 +1,109 @@
+.timer-page {
+  justify-content: center;
+
+  &__current--task {
+    margin: 0 auto;
+    padding: 10px 15px;
+
+    h1 {
+      opacity: 0.6;
+      padding: 5px 0;
+    }
+
+    h2 {
+      font-size: 1.125rem;
+      text-align: left;
+    }
+
+  }
+
+  &__timer {
+
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: 10px auto;
+
+    &--svg {
+      transform: scaleX(-1);
+    }
+
+    &--circle {
+      fill: none;
+      stroke: none;
+    }
+
+    &--path {
+      stroke-width: 4px;
+      stroke: #FFFFFF;
+      opacity: 0.6;
+    }
+
+    &--label{
+
+      &---current, &---countdown, &---rounds {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &---current {
+        width: 300px;
+        height: 220px;
+        opacity: 0.6;
+      }
+
+      &---countdown {
+        width: 300px;
+        height: 300px;
+        font-size: 4rem;
+      }
+
+      &---rounds {
+        width: 300px;
+        height: 380px;
+        opacity: 0.6;
+      }
+
+    }
+
+    &--remaining{
+      stroke-width: 4px;
+      stroke-linecap: round;
+      transform: rotate(90deg);
+      transform-origin: center;
+      transition: 1s linear all;
+    }
+
+  }
+
+  &__play--pause {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: 40px auto;
+    position: relative;
+    z-index: 1;
+
+    &---play {
+      width: 72px;
+      height: 82px;
+      cursor: pointer;
+    }
+
+    &---pause {
+      width: 71px;
+      height: 81px;
+      cursor: pointer;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .timer-page {
+    justify-content: normal;
+  }
+}

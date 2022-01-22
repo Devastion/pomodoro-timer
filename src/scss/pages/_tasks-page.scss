@@ -1,0 +1,88 @@
+.tasks-page {
+  overflow-y: scroll;
+  h1 {
+    margin-top: 20px;
+  }
+
+  &__add {
+    width: 90%;
+    height: 60px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    &---textarea {
+      border: none;
+      resize: none;
+      outline: none;
+      color: var(--bg-color);
+      height: 45px;
+      padding: 3px;
+      width: 80%;
+      margin: 3px;
+      float: left;
+    }
+
+    &---icon {
+      width: 32px;
+      height: 32px;
+      fill: var(--bg-color);
+      float: right;
+      margin: 14px 5px 0 0;
+      cursor: pointer;
+    }
+  }
+
+  &__list {
+    width: 90%;
+    margin: 0 auto;
+
+    &---box {
+      width: 100%;
+      height: auto;
+      background-color: #ffffff;
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    h2 {
+      color: var(--bg-color);
+      padding: 10px;
+      opacity: 1;
+    }
+
+    h2:first-letter{
+      text-transform: uppercase;
+    }
+
+    button {
+      color: var(--bg-color);
+    }
+
+    .edit{
+      float: left;
+      margin: 5px 0 5px 15px;
+      cursor: pointer;
+    }
+
+    .remove {
+      float: right;
+      margin: 5px 15px 5px 0;
+      cursor: pointer;
+    }
+
+    .clearfix {
+      clear: both;
+    }
+  }
+
+  .clear {
+
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .tasks-page {
+    overflow: hidden;
+  }
+}

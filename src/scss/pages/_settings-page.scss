@@ -1,0 +1,56 @@
+.settings-page {
+  h1 {
+    padding: 20px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    div {
+      width: 150px;
+      height: 100px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+
+    h1 {
+      padding: 10px 0;
+    }
+
+    input {
+      width: 80px;
+      height: 32px;
+      color: var(--bg-color);
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 5px;
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+      margin: 10px auto;
+    }
+  }
+
+  button {
+    margin: 20px 0;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .settings-page__wrapper {
+    width: 350px;
+    margin: 0 auto;
+    div {
+      flex: 1 1 50%;
+      margin: 0;
+    }
+  }
+}
